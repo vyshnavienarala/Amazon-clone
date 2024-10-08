@@ -186,5 +186,8 @@ exit
 - Make a change in the **GitHub Repository** (e.g., modify `index.html`) and commit it.
 - Jenkins will automatically trigger the build process, and the web application should reflect the changes in real-time.
 
+## Documentation Link
+https://docs.google.com/document/d/1qXoAuRETI6su_ZW7uryk-DFNLuU_waWyZ8BXUO_NPIc/edit?usp=sharing
+
 ## Expected Outcome
 By the end of this process, the Amazon clone website will be automatically deployed to an EC2 instance using a Docker container. Jenkins will continuously integrate new changes from the GitHub repository, triggering builds and deployments automatically whenever a new commit is made. The final web application will be accessible via the EC2 public IP with port 8000.
