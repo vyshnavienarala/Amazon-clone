@@ -73,6 +73,7 @@ sudo service nginx enable
 
 # Check Nginx status
 sudo service nginx status
+```
 
 ### 3. Access Jenkins
 - Copy the **Public IP Address** of the EC2 instance and paste it into a browser followed by `:8080`.  
@@ -83,8 +84,6 @@ sudo service nginx status
   2. Create a username, password, and provide email details.
   3. Click **Save & Continue** and **Start Using Jenkins**.
 
----
-
 ### 4. Create GitHub Personal Access Token
 1. Go to **GitHub Profile** → **Settings** → **Developer Settings** → **Personal Access Tokens (classic)**.
 2. Generate a new token:
@@ -92,8 +91,6 @@ sudo service nginx status
    - **Expiration**: 30 days
    - **Scopes**: Enable `repo` and `workflow`.
 3. Copy the **Personal Access Token**.
-
----
 
 ### 5. Connect Jenkins to GitHub
 - In Jenkins:
@@ -106,8 +103,6 @@ sudo service nginx status
        - **Secret**: (Paste the personal access token).
        - **ID**: Jenkins-For-CICD.
   3. Test the connection to see your GitHub username and **Save**.
-
----
 
 ### 6. Create a Jenkins Job
 1. In Jenkins, create a new item:
@@ -127,8 +122,6 @@ sudo service nginx status
     ```
 4. Save and click **Build Now**.  
    After success, access the web app via `http://43.205.241.55:8000`.
-
----
 
 ### 7. Automate Deployment Using SSH Keys and Webhooks
 1. Generate SSH keys:
@@ -160,9 +153,7 @@ sudo service nginx status
    - Go to **Manage Jenkins** → **Configure System** → **GitHub Server**:
      - **Kind**: SSH Username and Private Key.
      - **Private Key**: Enter the private SSH key manually.
-
----
-
+     - 
 ### 8. Set Up GitHub Webhooks
 - In GitHub:
   1. Go to **Repository Settings** → **Webhooks** → **Add Webhook**.
@@ -173,8 +164,6 @@ sudo service nginx status
 - In Jenkins:
   1. Go to the **kdm-amazon-clone Job**.
   2. Under **Build Triggers**, enable **GitHub hook trigger for GITScm polling**.
-
----
 
 ### 9. Grant Docker Permissions to Jenkins
 Run the following commands to grant Jenkins permission to run Docker:
@@ -191,12 +180,11 @@ sudo systemctl restart docker
 sudo su - jenkins
 groups # Should see "jenkins docker"
 exit
+```
 
 ### 10. Test Automatic Builds
 - Make a change in the **GitHub Repository** (e.g., modify `index.html`) and commit it.
 - Jenkins will automatically trigger the build process, and the web application should reflect the changes in real-time.
-
----
 
 ## Expected Outcome
 By the end of this process, the Amazon clone website will be automatically deployed to an EC2 instance using a Docker container. Jenkins will continuously integrate new changes from the GitHub repository, triggering builds and deployments automatically whenever a new commit is made. The final web application will be accessible via the EC2 public IP with port 8000.
