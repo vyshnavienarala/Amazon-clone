@@ -189,5 +189,8 @@ exit
 ## Documentation Link
 https://docs.google.com/document/d/1qXoAuRETI6su_ZW7uryk-DFNLuU_waWyZ8BXUO_NPIc/edit?usp=sharing
 
+## Implementation Video Link
+https://github.com/user-attachments/assets/1aa25aa4-e854-4703-b0c4-ee0ab641e470
+
 ## Expected Outcome
 By the end of this process, the Amazon clone website will be automatically deployed to an EC2 instance using a Docker container. Jenkins will continuously integrate new changes from the GitHub repository, triggering builds and deployments automatically whenever a new commit is made. The final web application will be accessible via the EC2 public IP with port 8000.
