@@ -127,8 +127,8 @@ sudo service nginx status
     # Open the sudoers file for editing
     sudo visudo
     
-    # Add this line to allow the Jenkins user to run Docker commands without a password:
-    # jenkins ALL=(ALL) NOPASSWD: /usr/bin/docker
+    # Add this at the end in the file to allow the Jenkins user to run Docker commands without a password:
+    jenkins ALL=(ALL) NOPASSWD: /usr/bin/docker
     
     # List running Docker containers again
     sudo docker ps
