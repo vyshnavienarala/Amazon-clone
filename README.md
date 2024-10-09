@@ -120,6 +120,22 @@ sudo service nginx status
     sudo docker build . -t kdm-amazon-clone
     sudo docker run -p 8000:80 -d kdm-amazon-clone
     ```
+    **NOTE**: Before Clicking Build Now First Make Changes in "sudo visudo"
+   # The sudo visudo command opens and edits the sudoers file, which is a configuration file used by the sudo program to control which users can run commands as root or other users.
+
+   ```bash
+    # Open the sudoers file for editing
+    sudo visudo
+    
+    # Add this line to allow the Jenkins user to run Docker commands without a password:
+    # jenkins ALL=(ALL) NOPASSWD: /usr/bin/docker
+    
+    # List running Docker containers again
+    sudo docker ps
+    
+    # Kill a specific Docker container (replace with your container ID)
+    sudo docker kill 233a2df5f25d
+   ```
 4. Save and click **Build Now**.  
    After success, access the web app via `http://43.205.241.55:8000`.
 
