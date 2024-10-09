@@ -169,7 +169,7 @@ sudo service nginx status
    - Go to **Manage Jenkins** → **Configure System** → **GitHub Server**:
      - **Kind**: SSH Username and Private Key.
      - **Private Key**: Enter the private SSH key manually.
-     - 
+
 ### 8. Set Up GitHub Webhooks
 - In GitHub:
   1. Go to **Repository Settings** → **Webhooks** → **Add Webhook**.
