@@ -16,7 +16,7 @@ The challenge is to automate the process of deploying the Amazon clone website. 
 
 ## Architecture
 
----
+![Build and Deploy an Amazon Clone Website with Automated CICD Pipeline Using Jenkins and GitHub](https://github.com/user-attachments/assets/8b0c6bd8-d222-49c3-8742-f6fa6e1a720d)
 
 ## Steps
 
