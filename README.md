@@ -121,7 +121,7 @@ sudo service nginx status
     sudo docker run -p 8000:80 -d kdm-amazon-clone
     ```
     **NOTE**: Before Clicking Build Now First Make Changes in "sudo visudo"
-   ### The sudo visudo command opens and edits the sudoers file, which is a configuration file used by the sudo program to control which users can run commands as root or other users.
+   #### The sudo visudo command opens and edits the sudoers file, which is a configuration file used by the sudo program to control which users can run commands as root or other users.
 
    ```bash
     # Open the sudoers file for editing
